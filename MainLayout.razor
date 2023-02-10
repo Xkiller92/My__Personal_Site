@@ -1,0 +1,21 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider IsDarkMode="true"/>
+<MudDialogProvider/>
+<MudSnackbarProvider/>
+<MudLayout class="overflow-hidden mb-16">
+    <MudMainContent Class="pt-0 ">
+        <main> @Body </main>
+    </MudMainContent>
+    <MudAppBar Bottom="true" Fixed="true" Color="Color.Primary" Elevation="1">
+        <a href="/" class="pr-6"><h1>Portfolio</h1></a>
+        <a href="/projects" class="pr-6"><h1>Projects</h1></a>
+        <a href="/requests"><h1>Requests</h1></a>
+        <MudSpacer />
+        <h1 class="pr-6">wissemgharbi987789@gmail.com</h1>
+        <h1 class="pr-6">+216 22865969</h1>
+        <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Href="https://github.com/Xkiller92"/>
+        <MudIconButton Icon="@Icons.Custom.Brands.Facebook" Color="Color.Inherit" Href="https://www.facebook.com/wissem.gharbi.9659"/>
+        <MudIconButton Icon="@Icons.Custom.Brands.LinkedIn" Color="Color.Inherit" Href="https://github.com/Xkiller92"/>
+    </MudAppBar>
+</MudLayout>

@@ -1,0 +1,177 @@
+﻿@page "/"
+<MudGrid Spacing="5" Justify="Justify.Center">
+    <MudItem>
+        <MudPaper Height="1px" Width="1px"/>
+    </MudItem>
+    <MudItem  class="mx-auto pa-16">
+        
+                <MudText Align="Align.Center" Typo="Typo.h1" Color="Color.Secondary">Wissem gharbi</MudText>
+                <MudText Align="Align.Center" Typo="Typo.h3" Color="Color.Warning">Fullstack software developer</MudText>
+                <MudText Align="Align.Center" Typo="Typo.h5" Color="Color.Warning">3 years of non professional experience</MudText>
+        
+    </MudItem>
+    <MudItem>
+        <MudPaper Height="1px" Width="1px" />
+    </MudItem>
+</MudGrid>
+
+<MudGrid Spacing="5" Justify="Justify.Center">
+    <MudItem>
+        <MudPaper Height="1px" Width="1px"/>
+    </MudItem>
+    <MudItem  class="mx-auto pa-16">
+        
+                <MudText Align="Align.Center" Typo="Typo.h1" Color="Color.Secondary">About Me</MudText>
+                <MudText Align="Align.Center" Typo="Typo.h5">
+                    After a long day of school and life matters, 
+                </MudText>
+                <MudText Align="Align.Center" Typo="Typo.h5">
+                    I always find myself sitting in front of my computer 
+                </MudText>
+                <MudText Align="Align.Center" Typo="Typo.h5">
+                    making small applets for mundain things. After a while
+                </MudText>
+                <MudText Align="Align.Center" Typo="Typo.h5">
+                    i realized that programming was a passion of mine, So 
+                </MudText>
+                <MudText Align="Align.Center" Typo="Typo.h5">
+                    i invested allmy time learning and improving my skills.
+                </MudText>
+                <MudText Align="Align.Center" Typo="Typo.h5">
+                    As i made the learning journey i met, helped and mentored 
+                </MudText>
+                <MudText Align="Align.Center" Typo="Typo.h5">
+                    lots oflike-minded people , made a lot of connections and 
+                    </MudText>
+                <MudText Align="Align.Center" Typo="Typo.h5">
+                    had an amazing time, And thats when i knew that my investment
+                    </MudText>
+                <MudText Align="Align.Center" Typo="Typo.h5">
+                     was a success.
+                </MudText>
+        
+    </MudItem>
+    <MudItem>
+        <MudPaper Height="1px" Width="1px" />
+    </MudItem>
+</MudGrid>
+
+<MudGrid Spacing="5" Justify="Justify.Center">
+    <MudItem>
+        <MudPaper Height="1px" Width="1px"/>
+    </MudItem>
+    <MudItem  class="mx-auto pa-16">
+        <MudText Align="Align.Center" Typo="Typo.h1" Color="Color.Secondary">Skills</MudText>
+    </MudItem>
+    <MudItem>
+        <MudPaper Height="1px" Width="1px" />
+    </MudItem>
+</MudGrid>
+
+<MudGrid Spacing="5" Justify="Justify.Center">
+    <MudItem>
+        <MudPaper Height="1px" Width="1px"/>
+    </MudItem>
+    <MudItem  class="mx-auto pa-16">
+        <MudPaper Height="200px" Class="mud-theme-primary" Style="overflow:hidden; position:relative;">
+            <MudDrawerContainer Class="mud-height-full">
+                <MudDrawer @bind-Open="@openStart" Anchor="Anchor.Start" Elevation="0" Variant="@DrawerVariant.Persistent">
+                    <MudNavMenu>
+                        <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Star">Creative thinking</MudNavLink>
+                        <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Star">Good communication skills</MudNavLink>
+                        <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Star">Ability to work individually and with other team members in a collaborative manner</MudNavLink>
+                    </MudNavMenu>
+                </MudDrawer>
+                <MudDrawer @bind-Open="@openEnd" Fixed="false" Anchor="Anchor.End" Elevation="0" Variant="@DrawerVariant.Persistent">
+                    <MudNavMenu>
+                        <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Star">Proficiency in OOP</MudNavLink>
+                        <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Star">Good knowlage and understanding of various design pattrerns</MudNavLink>
+                        <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Star">Exellent debugging skills</MudNavLink>
+                        <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Star">S.O.L.I.D coding practices</MudNavLink>
+                    </MudNavMenu>
+                </MudDrawer>
+                <div class="d-flex justify-center align-center mud-height-full">
+                    <MudButton Color="Color.Inherit" OnClick="@ToggleStartDrawer" StartIcon="@(Rtl ? Icons.Material.Filled.East : Icons.Material.Filled.West)" Class="mx-2">Soft Skills</MudButton>
+                    <MudButton Color="Color.Inherit" OnClick="@ToggleEndDrawer" EndIcon="@(Rtl ? Icons.Material.Filled.West : Icons.Material.Filled.East)" Class="mx-2">hard Skills</MudButton>
+                </div>
+            </MudDrawerContainer>
+        </MudPaper>
+    </MudItem>
+    <MudItem>
+        <MudPaper Height="1px" Width="1px" />
+    </MudItem>
+</MudGrid>
+
+<MudGrid Spacing="5" Justify="Justify.Center">
+    <MudItem>
+        <MudPaper Height="1px" Width="1px"/>
+    </MudItem>
+    <MudItem  class="mx-auto pa-16">
+        <MudText Align="Align.Center" Typo="Typo.h1" Color="Color.Secondary">Technologies</MudText>
+    </MudItem>
+    <MudItem>
+        <MudPaper Height="1px" Width="1px" />
+    </MudItem>
+</MudGrid>
+
+<MudGrid Spacing="5" Justify="Justify.Center">
+    <MudItem  class="mx-auto pa-16">
+        <MudText Align="Align.Center" Typo="Typo.h5">
+            Fron-End 
+        </MudText>
+        <MudPaper Width="300px" Square="true">
+            <MudList Clickable="true">
+               <MudListItem Align="Align.Center">Blazor</MudListItem>
+               <MudListItem Align="Align.Center">React</MudListItem>
+               <MudListItem Align="Align.Center">XAML(WPF)</MudListItem>
+               <MudListItem Align="Align.Center">bootstrap</MudListItem>
+            </MudList>
+        </MudPaper>
+    </MudItem>
+    <MudItem  class="mx-auto pa-16">
+        <MudText Align="Align.Center" Typo="Typo.h5">
+            Back-End 
+        </MudText>
+       <MudPaper Width="300px" Square="true">
+        <MudList Clickable="true">
+            <MudListItem Align="Align.Center">ASP.net</MudListItem>
+            <MudListItem Align="Align.Center">REST API's</MudListItem>
+            <MudListItem Align="Align.Center">node.js</MudListItem>
+            <MudListItem Align="Align.Center">Databases: (SQL_Server) (MongoDB) (postgres)</MudListItem>
+        </MudList>
+    </MudPaper>
+    </MudItem>
+    <MudItem  class="mx-auto pa-16">
+        <MudText Align="Align.Center" Typo="Typo.h5">
+            Others 
+        </MudText>
+        <MudPaper Width="300px" Square="true">
+            <MudList Clickable="true">
+                <MudListItem Align="Align.Center">Git/github</MudListItem>
+                <MudListItem Align="Align.Center">linux</MudListItem>
+                <MudListItem Align="Align.Center">Docker</MudListItem>
+                <MudListItem Align="Align.Center">Unity</MudListItem>
+                <MudListItem Align="Align.Center">Cloud computing</MudListItem>
+            </MudList>
+        </MudPaper>    
+    </MudItem>
+</MudGrid>
+
+@code
+{
+    [CascadingParameter]
+    public bool Rtl { get; set; }
+
+    bool openStart = false;
+    bool openEnd = false;
+
+    void ToggleStartDrawer()
+    {
+        openStart = !openStart;
+    }
+
+    void ToggleEndDrawer()
+    {
+        openEnd = !openEnd;
+    }
+}
