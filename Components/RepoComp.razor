@@ -1,0 +1,23 @@
+@foreach (var repo in repos)
+{
+       <MudGrid Spacing="5" Justify="Justify.Center">
+    <MudItem>
+        <MudPaper Height="1px" Width="1px"/>
+    </MudItem>
+    <MudItem  class="mx-auto pa-16">
+                <MudImage ObjectPosition="ObjectPosition.Center" Width="600" Height="300" ObjectFit="ObjectFit.Fill" Src="Assets/proj.png" Alt="Mony the dog" Elevation="25" Class="rounded-lg"/>
+                <MudText Align="Align.Center" Typo="Typo.h3" Color="Color.Secondary">@repo.full_name</MudText>
+                <MudText Align="Align.Center" Typo="Typo.h5">
+                    @repo.description 
+                </MudText>
+        
+    </MudItem>
+    <MudItem>
+        <MudPaper Height="1px" Width="1px" />
+    </MudItem>
+</MudGrid>
+}  
+
+    @code{
+        [Parameter] public List<Repo> repos {get; set;}
+    } 

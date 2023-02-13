@@ -5,6 +5,7 @@ using MudBlazor.Services;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddMudServices();
+builder.Services.AddHttpClient();
 builder.Services.AddServerSideBlazor(options =>
 {
     options.DetailedErrors = false;

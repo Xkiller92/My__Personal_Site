@@ -1,1 +1,39 @@
 @page "/projects"
+@using System.IO;
+@using System.Text.Json;
+
+<RepoComp repos="repos"></RepoComp>
+
+@code{
+    [Parameter] public List<Repo> repos {get; set;}
+    private SearchRepositoryResult repo;
+    [Inject] public IHttpClientFactory clientFactory { get; set;}
+    protected override async Task OnInitializedAsync()
+    {
+        await GetUrl("https://api.github.com/users/Xkiller92/repos");
+    }
+
+    public async Task GetUrl(string url)
+    {
+        repos = new List<Repo>();
+        var request = new HttpRequestMessage(HttpMethod.Get, url);
+        request.Headers.Add("Accept", "application/json");
+        request.Headers.Add("User-Agent", "get data service");
+
+        var client = clientFactory.CreateClient();
+
+        var response = await client.SendAsync(request);
+
+        string res = null;
+
+        if (response.IsSuccessStatusCode)
+        {
+            using var responseStream = await response.Content.ReadAsStreamAsync();
+            var streamReader = new StreamReader(responseStream);
+            res = await streamReader.ReadToEndAsync().ConfigureAwait(false);
+
+            repos = JsonSerializer.Deserialize<List<Repo>>(res);    
+        }
+    }
+}
+
