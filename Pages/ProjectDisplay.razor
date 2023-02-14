@@ -6,7 +6,6 @@
 
 @code{
     [Parameter] public List<Repo> repos {get; set;}
-    private SearchRepositoryResult repo;
     [Inject] public IHttpClientFactory clientFactory { get; set;}
     protected override async Task OnInitializedAsync()
     {
@@ -36,4 +35,3 @@
         }
     }
 }
-
